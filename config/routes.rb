@@ -4,8 +4,10 @@ Omrails::Application.routes.draw do
 
   devise_for :users
 
-  match 'users/:id' => 'users#show', as: :user
+  get "users/show"
 
+  match 'users/:id' => 'users#show', as: :user
+ 
  get 'about' => 'pages#about'
 
  root :to => 'pages#home'
